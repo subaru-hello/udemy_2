@@ -1,11 +1,11 @@
 
 class BoardsController < ApplicationController
   def index
-  
+    @boards = Board.all 
   end
 
   def new
-    @board = Board.new 
+    @boards = Board.new 
   end
   def create
     Board.create(board_params)
