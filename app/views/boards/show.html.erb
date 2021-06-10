@@ -5,4 +5,8 @@
     <%= link_to '編集', edit_board_path(@board), class: 'btn btn-outline-dark' %>
   </div>
 </div>
+<% if flash[:notice]%>
+  <div class="alert alert-primary"><%= flash[:notice]%></div>
+<% end %>
+
 <%= render @board%>
