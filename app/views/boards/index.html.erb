@@ -3,6 +3,9 @@
   <div class="ml-auto boards__linkBox">
     <%= link_to '新規作成', new_board_path, class: 'btn btn-outline-dark'%>
   </div>
+  <% if flash[:notice]%>
+  <div class = "alert alert-danger"><%= flash[:notice]%></div>
+<%end%>
 </div>
 <table class="table table-hover boards__table">
   <thead class="thead-dark">
@@ -30,4 +33,6 @@
     <%end%>
   </tbody>
 </table>
+
+<%= paginate @boards %>
 

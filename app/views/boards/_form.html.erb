@@ -1,4 +1,14 @@
-<%= form_for @board do |f|%>
+<%if flash[:error_messages]%>
+  <div class="alert alert-danger">
+    <ul>
+      <% flash[:error_messages].each do |msg|%>
+        <li><%= msg %></li>
+      <%end%>
+    </ul>
+  </div>
+<%end%>
+
+<%= form_for board do |f|%>
   <div class="form-group">
     <%= f.label :name, '名前' %>
     <%= f.text_field :name, class: 'form-control'%>
