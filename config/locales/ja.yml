@@ -8,6 +8,11 @@ ja:
       next: '次'
       truncate: '...'
   activerecord:
+    attributes: 
+     board:
+       name: '名前'
+       title: 'タイトル'
+       body: '本文'
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
