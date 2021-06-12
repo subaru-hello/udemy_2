@@ -9,6 +9,10 @@ class BoardsController < ApplicationController
     @board = Board.new(flash[:board])
   end
 
+  def show
+    @comment = @board.comments.new
+  end
+
   def create
     board = Board.new(board_params)
     if board.save
@@ -27,11 +31,9 @@ class BoardsController < ApplicationController
 
   def destroy
     @board.delete
-    redirect_to board, flash: { notice: "「#{@board.title}」の掲示板が削除されました"}
+    redirect_to boards_path, flash: { notice: "「#{@board.title}」の掲示板が削除されました"}
   end
 
-  def show
-  end
 
   def edit
   end

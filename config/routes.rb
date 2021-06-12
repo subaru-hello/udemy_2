@@ -1,4 +1,5 @@
 Rails.application.routes.draw do  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 resources :boards
-delete 'boards/:id', to: 'boards#destroy'
+resources :comments
+# , only: %i[create,destroy,show]
 end
