@@ -13,6 +13,9 @@ ja:
        name: '名前'
        title: 'タイトル'
        body: '本文'
+     comment:
+       name: '名前'
+       comment: 'コメント'    
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
