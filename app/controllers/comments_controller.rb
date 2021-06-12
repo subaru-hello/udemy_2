@@ -12,11 +12,11 @@ class CommentsController < ApplicationController
     end
   end
 
-   def show
-    comment = Comment.find(params[:id])
-    comment.delete
-    redirect_to comment.board, flash: { notice: 'コメントが削除されました'}
-  end
+  #  def show
+  #   comment = Comment.find(params[:id])
+  #   comment.delete
+  #   redirect_to comment.board, flash: { notice: 'コメントが削除されました'}
+  # end
 
   def destroy
     comment = Comment.find(params[:id])
