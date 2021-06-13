@@ -36,18 +36,23 @@ class BoardsController < ApplicationController
 
 
   def edit
+    @board.attributes = flash[:board] if flash[:board]
   end
 
- def update
-   @board.update(board_params)
-    redirect_to @board
- end
-
-
+  def update
+    if @board.update(board_params)
+      redirect_to @board
+    else
+      redirect_to :back, flash: {
+        board: @board,
+        error_messages: @board.errors.full_messages
+      }
+    end
+  end
 
 private
 def board_params
-  params.require(:board).permit(:name, :title, :body)
+  params.require(:board).permit(:name, :title, :body, tag_ids: [])
 end
 
 def set_target_board
