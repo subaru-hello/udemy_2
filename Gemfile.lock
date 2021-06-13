@@ -46,6 +46,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (8.6.5)
       execjs
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -88,7 +89,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    libv8 (3.16.14.19-x86_64-linux)
+    libv8 (3.16.14.19)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -201,6 +202,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   autoprefixer-rails (= 8.6.5)
+  bcrypt (~> 3.1.7)
   bootstrap (~> 4.0.0)
   byebug
   coffee-rails (~> 4.2)
