@@ -8,7 +8,11 @@ ja:
       next: '次'
       truncate: '...'
   activerecord:
-    attributes: 
+    attributes:
+     user:
+      name: 'ユーザー名'
+      password: 'パスワード'
+      #  password_confirmation: 'パスワード確認'  
      board:
        name: '名前'
        title: 'タイトル'
